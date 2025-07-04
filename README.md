@@ -17,3 +17,11 @@ Este serviço calcula o preço total de caixas de tomate com base em faixas de d
 ## 🔧 Como rodar
 ```bash
 ./mvnw spring-boot:run
+
+Exemplo de requisição:
+GET /preco?quantidade=25
+
+Resposta:
+{
+  "precoTotal": 1112.50
+}
