@@ -91,9 +91,3 @@ http://localhost:8081/api/preco/50
 ```
 Resposta:
 1950.0
-
-yaml
-Copy
-Edit
-1950.0
-
