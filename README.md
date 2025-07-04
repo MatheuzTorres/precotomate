@@ -1,44 +1,45 @@
-# Serviço de Preço do Tomate 🍅
+# 🍅 Preço do Tomate – Serviço REST
 
-## Descrição
+Este serviço calcula o **preço total da venda de caixas de tomate**, aplicando automaticamente descontos progressivos conforme a quantidade solicitada.
 
-Este microserviço calcula o valor total para uma quantidade informada de caixas de tomate, aplicando descontos progressivos conforme faixas de quantidade.  
-O preço base por caixa é parametrizável, com valor padrão de R$ 50,00.  
-
----
-
-## Tecnologias Utilizadas
-
-- Java 17  
-- Spring Boot 
-- Maven  
-- REST (endpoints HTTP)  
+Projeto desenvolvido para a disciplina **Sistemas Web 3** – UFRRJ  
+Aluno: **Matheus Torres**
 
 ---
 
-## Tabela de Descontos
+## 🧰 Tecnologias Utilizadas
 
-| Quantidade de Caixas | Desconto Aplicado |
+- Java 17
+- Spring Boot
+- Spring Web (REST)
+- Maven
+
+---
+
+## 🎯 Objetivo
+
+Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e retorne o **preço total com desconto** aplicado automaticamente conforme as regras do negócio.
+
+---
+
+## 📦 Regras de Desconto por Quantidade
+
+| Quantidade de caixas | Desconto aplicado |
 |----------------------|-------------------|
-| Até 9                | 0%                |
+| até 9                | 0%                |
 | 10 a 19              | 5%                |
 | 20 a 29              | 11%               |
 | 30 ou mais           | 22%               |
 
+> 💰 Preço base por caixa: **R$ 50,00**
+
 ---
 
-## Endpoints
+## 🚀 Como Executar o Projeto
 
-### GET /preco
+### 1. Clonar o repositório
 
-Retorna o preço total para uma quantidade de caixas com desconto aplicado.
-
-#### Parâmetros de Query
-
-- `quantidade` (obrigatório): número de caixas de tomate.
-
-#### Exemplo de Requisição
-
-```http
-GET http://localhost:8080/preco?quantidade=25
+```bash
+git clone https://github.com/SEU_USUARIO/preco-tomate.git
+cd preco-tomate
 
