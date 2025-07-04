@@ -1,27 +1,44 @@
 # Serviço de Preço do Tomate 🍅
 
-Este serviço calcula o preço total de caixas de tomate com base em faixas de desconto.
+## Descrição
 
-## 🛠 Tecnologias
-- Spring Boot
-- REST
+Este microserviço calcula o valor total para uma quantidade informada de caixas de tomate, aplicando descontos progressivos conforme faixas de quantidade.  
+O preço base por caixa é parametrizável, com valor padrão de R$ 50,00.  
 
-## 📦 Regras de Desconto
-| Quantidade de Caixas | Desconto |
-|----------------------|----------|
-| Até 9                | 0%       |
-| 10 a 19              | 5%       |
-| 20 a 29              | 11%      |
-| 30 ou mais           | 22%      |
+---
 
-## 🔧 Como rodar
-```bash
-./mvnw spring-boot:run
+## Tecnologias Utilizadas
 
-Exemplo de requisição:
-GET /preco?quantidade=25
+- Java 17  
+- Spring Boot 
+- Maven  
+- REST (endpoints HTTP)  
 
-Resposta:
-{
-  "precoTotal": 1112.50
-}
+---
+
+## Tabela de Descontos
+
+| Quantidade de Caixas | Desconto Aplicado |
+|----------------------|-------------------|
+| Até 9                | 0%                |
+| 10 a 19              | 5%                |
+| 20 a 29              | 11%               |
+| 30 ou mais           | 22%               |
+
+---
+
+## Endpoints
+
+### GET /preco
+
+Retorna o preço total para uma quantidade de caixas com desconto aplicado.
+
+#### Parâmetros de Query
+
+- `quantidade` (obrigatório): número de caixas de tomate.
+
+#### Exemplo de Requisição
+
+```http
+GET http://localhost:8080/preco?quantidade=25
+
