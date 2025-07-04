@@ -60,3 +60,40 @@ O serviço ficará disponível em:
 ```arduino
 http://localhost:8081
 ```
+
+📲 Como Usar a API
+Endpoint:
+```bash
+GET /api/preco/{quantidade}
+```
+{quantidade}: número de caixas de tomate
+Retorno: valor total com desconto (em formato double)
+
+🔍 Exemplos de Uso
+Exemplo 1 – 5 caixas (sem desconto)
+```bash
+http://localhost:8081/api/preco/5
+```
+Resposta:
+250.0
+
+
+Exemplo 2 – 25 caixas (11% de desconto)
+```bash
+http://localhost:8081/api/preco/25
+```
+Resposta:
+1112.5
+
+Exemplo 3 – 50 caixas (22% de desconto)
+```bash
+http://localhost:8081/api/preco/50
+```
+Resposta:
+1950.0
+
+yaml
+Copy
+Edit
+1950.0
+
