@@ -43,3 +43,13 @@ Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e r
 git clone https://github.com/SEU_USUARIO/preco-tomate.git
 cd preco-tomate
 
+```
+
+2. Rodar com Maven
+Se você tiver o Maven Wrapper (mvnw):
+```bash
+./mvnw spring-boot:run
+```
+Ou, se usa Maven instalado globalmente:
+
+mvn spring-boot:run
