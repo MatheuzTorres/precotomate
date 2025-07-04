@@ -40,8 +40,8 @@ Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e r
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/preco-tomate.git
-cd preco-tomate
+git clone https://github.com/SEU_USUARIO/precotomate.git
+cd precotomate
 
 ```
 
@@ -51,5 +51,12 @@ Se você tiver o Maven Wrapper (mvnw):
 ./mvnw spring-boot:run
 ```
 Ou, se usa Maven instalado globalmente:
-
+```bash
 mvn spring-boot:run
+```
+
+O serviço ficará disponível em:
+
+```arduino
+http://localhost:8081
+```
