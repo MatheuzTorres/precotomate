@@ -64,10 +64,22 @@ http://localhost:8081
 📲 Como Usar a API
 Endpoint:
 ```
-GET /api/preco/{quantidade}
+2. GET /api/preco/
+Descrição: carrega uma página HTML com formulário para calcular preço de tomate.
+
+Produz: text/html.
+
+Acesso
+No navegador, acesse:
+http://localhost:8080/api/preco/
+Preencha a quantidade e clique em “Calcular” para ver o resultado dinámico.
+
 ```
 {quantidade}: número de caixas de tomate
 Retorno: valor total com desconto (em formato double)
+
+
+
 
 🔍 Exemplos de Uso
 Exemplo 1 – 5 caixas (sem desconto)
