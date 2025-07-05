@@ -1,44 +1,93 @@
-# Serviço de Preço do Tomate 🍅
+# 🍅 Preço do Tomate – Serviço REST
 
-## Descrição
+Este serviço calcula o **preço total da venda de caixas de tomate**, aplicando automaticamente descontos progressivos conforme a quantidade solicitada.
 
-Este microserviço calcula o valor total para uma quantidade informada de caixas de tomate, aplicando descontos progressivos conforme faixas de quantidade.  
-O preço base por caixa é parametrizável, com valor padrão de R$ 50,00.  
-
----
-
-## Tecnologias Utilizadas
-
-- Java 17  
-- Spring Boot 
-- Maven  
-- REST (endpoints HTTP)  
+Projeto desenvolvido para a disciplina **Sistemas Web 3** – UFRRJ  
+Aluno: **Matheus Torres**
 
 ---
 
-## Tabela de Descontos
+## 🧰 Tecnologias Utilizadas
 
-| Quantidade de Caixas | Desconto Aplicado |
+- Java 17
+- Spring Boot
+- Spring Web (REST)
+- Maven
+
+---
+
+## 🎯 Objetivo
+
+Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e retorne o **preço total com desconto** aplicado automaticamente conforme as regras do negócio.
+
+---
+
+## 📦 Regras de Desconto por Quantidade
+
+| Quantidade de caixas | Desconto aplicado |
 |----------------------|-------------------|
-| Até 9                | 0%                |
+| até 9                | 0%                |
 | 10 a 19              | 5%                |
 | 20 a 29              | 11%               |
 | 30 ou mais           | 22%               |
 
+> 💰 Preço base por caixa: **R$ 50,00**
+
 ---
 
-## Endpoints
+## 🚀 Como Executar o Projeto
 
-### GET /preco
+### 1. Clonar o repositório
 
-Retorna o preço total para uma quantidade de caixas com desconto aplicado.
+```
+git clone https://github.com/MatheuzTorres/precotomate.git
+cd precotomate
 
-#### Parâmetros de Query
+```
 
-- `quantidade` (obrigatório): número de caixas de tomate.
+2. Rodar com Maven
+Se você tiver o Maven Wrapper (mvnw):
+```
+./mvnw spring-boot:run
+```
+Ou, se usa Maven instalado globalmente:
+```
+mvn spring-boot:run
+```
 
-#### Exemplo de Requisição
+O serviço ficará disponível em:
 
-```http
-GET http://localhost:8080/preco?quantidade=25
+```
+http://localhost:8081
+```
 
+📲 Como Usar a API
+Endpoint:
+```
+GET /api/preco/{quantidade}
+```
+{quantidade}: número de caixas de tomate
+Retorno: valor total com desconto (em formato double)
+
+🔍 Exemplos de Uso
+Exemplo 1 – 5 caixas (sem desconto)
+```
+http://localhost:8081/api/preco/5
+```
+Resposta:
+250.0
+
+
+Exemplo 2 – 25 caixas (11% de desconto)
+```
+http://localhost:8081/api/preco/25
+```
+Resposta:
+1112.5
+
+Exemplo 3 – 50 caixas (22% de desconto)
+```
+http://localhost:8081/api/preco/50
+```
+Resposta:
+1950.0
