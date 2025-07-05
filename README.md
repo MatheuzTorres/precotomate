@@ -39,7 +39,7 @@ Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e r
 
 ### 1. Clonar o repositório
 
-```bash
+```
 git clone https://github.com/SEU_USUARIO/precotomate.git
 cd precotomate
 
@@ -47,23 +47,23 @@ cd precotomate
 
 2. Rodar com Maven
 Se você tiver o Maven Wrapper (mvnw):
-```bash
+```
 ./mvnw spring-boot:run
 ```
 Ou, se usa Maven instalado globalmente:
-```bash
+```
 mvn spring-boot:run
 ```
 
 O serviço ficará disponível em:
 
-```arduino
+```
 http://localhost:8081
 ```
 
 📲 Como Usar a API
 Endpoint:
-```bash
+```
 GET /api/preco/{quantidade}
 ```
 {quantidade}: número de caixas de tomate
@@ -71,7 +71,7 @@ Retorno: valor total com desconto (em formato double)
 
 🔍 Exemplos de Uso
 Exemplo 1 – 5 caixas (sem desconto)
-```bash
+```
 http://localhost:8081/api/preco/5
 ```
 Resposta:
@@ -79,14 +79,14 @@ Resposta:
 
 
 Exemplo 2 – 25 caixas (11% de desconto)
-```bash
+```
 http://localhost:8081/api/preco/25
 ```
 Resposta:
 1112.5
 
 Exemplo 3 – 50 caixas (22% de desconto)
-```bash
+```
 http://localhost:8081/api/preco/50
 ```
 Resposta:
