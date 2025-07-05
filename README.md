@@ -40,7 +40,7 @@ Fornecer um endpoint REST que receba a **quantidade de caixas** como entrada e r
 ### 1. Clonar o repositório
 
 ```
-git clone https://github.com/SEU_USUARIO/precotomate.git
+git clone https://github.com/MatheuzTorres/precotomate.git
 cd precotomate
 
 ```
