@@ -71,11 +71,12 @@ Produz: text/html.
 
 Acesso
 No navegador, acesse:
-http://localhost:8080/api/preco/
+http://localhost:8081/api/preco/
 Preencha a quantidade e clique em “Calcular” para ver o resultado dinámico.
 
 ```
 {quantidade}: número de caixas de tomate
+
 Retorno: valor total com desconto (em formato double)
 
 
